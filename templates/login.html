@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="log">
+            <form action="/login" id="login" method="post">
+                <h1>SEJA BEM-VINDO!</h1>
+                <div class="inputs">
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" class="input" placeholder="Digite seu nome" required>
+                    <br>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" class="input" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
