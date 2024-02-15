@@ -15,14 +15,12 @@ body{
 }
 .mensagemBack {
     display: flex;
-
     border: solid 1px white;
     border-radius: 20px;
-    padding: 20px 40px 20px 40px;
+    padding: 0px 60px 0px 60px;
     background-color: black;
     color: white;
-    
-    margin-top: 10px;
+    margin-bottom: 15px;
     font-size: 20px;
 
 }

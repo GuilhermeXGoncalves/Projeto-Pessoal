@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="/static/login.css">
 </head>
 <body>
-    {% set mensagem = get_flashed_messages() %}
-    {% if mensagem %}
-        <div class="msg">
-            <div class="mensagemBack">
-            {{mensagem[0]}}
-            </div>
-        </div>
-    {% endif %}
-
+    
     <div class="container">
+        {% set mensagem = get_flashed_messages() %}
+        {% if mensagem %}
+            <div class="msg">
+                <div class="mensagemBack">
+                {{mensagem[0]}}
+                </div>
+            </div>
+        {% endif %}
         <div class="log">
             <form action="/login" id="login" method="post">
                 <h1>SEJA BEM-VINDO!</h1>
