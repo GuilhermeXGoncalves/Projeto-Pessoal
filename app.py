@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, request
+from flask import Flask, render_template, redirect, request, flash
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'TESTE'
@@ -15,7 +15,12 @@ def login():
     senha = request.form.get('senha')
     print(nome)
     print(senha)
-    return redirect('/')
+    
+    if nome == 'guilherme' and senha == '123':
+        return render_template('usuario.html')
+    else:
+        flash('Usuário Inválido')
+        return redirect('/')
 
 
 @app.route('/cadastro', methods=['GET', 'POST'])
@@ -29,7 +34,6 @@ def cadastro():
     print(email)
 
     return render_template('cadastro.html')
-
 
 if __name__ in "__main__":
     app.run(debug=True)
