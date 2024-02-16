@@ -1,12 +1,6 @@
 from flask import Flask, render_template, redirect, request, flash
-import database
 from control import usuario
 
-
-
-conexao = database.conexao
-cursor = database.conexao.cursor()
-database.criarTabelaDeUsuarios()
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'TESTE'
@@ -43,9 +37,11 @@ def cadastro():
     
     return render_template('cadastro.html')
 
+
 @app.route('/usuarios' , methods=['GET'])
 def lerUsuarios():
     return usuario.lerUsuario()
+
 
 if __name__ in "__main__":
     app.run(debug=True)
