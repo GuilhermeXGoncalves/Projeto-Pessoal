@@ -45,9 +45,6 @@ def cadastro():
 
 @app.route('/usuarios' , methods=['GET'])
 def lerUsuarios():
-    comando = f'SELECT id, nome, senha, email FROM usuarios'
-    cursor.execute(comando)
-    usuarios = cursor.fetchall()
     return usuario.lerUsuario()
 
 if __name__ in "__main__":
