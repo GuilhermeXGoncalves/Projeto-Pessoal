@@ -1,5 +1,9 @@
 from flask import Flask, render_template, redirect, request, flash
 import database
+from control import usuario
+
+
+
 conexao = database.conexao
 cursor = database.conexao.cursor()
 database.criarTabelaDeUsuarios()
@@ -44,7 +48,7 @@ def lerUsuarios():
     comando = f'SELECT id, nome, senha, email FROM usuarios'
     cursor.execute(comando)
     usuarios = cursor.fetchall()
-    return usuarios
+    return usuario.lerUsuario()
 
 if __name__ in "__main__":
     app.run(debug=True)
